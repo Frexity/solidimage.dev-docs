@@ -7,23 +7,17 @@ export default defineConfig({
   appearance: 'force-dark',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
-    ],
+    nav: [],
 
     sidebar: [
       {
         text: 'Examples',
         items: [
+          { text: 'Getting started', link: '/getting-started' },
           { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: 'Runtime API Examples', link: '/api-examples' },
         ]
       }
     ],
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
   }
 })
