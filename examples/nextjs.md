@@ -35,7 +35,7 @@ async function getData() {
       formdata.append('analysis[file]', imageBlob, fileName)
       formdata.append('analysis[thumb_hash_data_url_enabled]', '1')
 
-      const res = await fetch('https://solidimage.dev/api/v1/image_analysis', {
+      const res = await fetch('https://solidimage.dev/v1/image_analysis', {
         method: 'POST',
         body: formdata,
       })
