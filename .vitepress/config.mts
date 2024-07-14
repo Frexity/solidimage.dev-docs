@@ -2,22 +2,34 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Solidimage.dev - Docs",
-  description: "Documentation for solidimage.dev",
+  title: "docs.solidimage.dev",
+  description: "API Documentation for solidimage.dev",
   appearance: 'force-dark',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [],
-
+    search: {
+      provider: 'local'
+    },
     sidebar: [
+      {
+        text: 'API',
+        items: [
+          { text: 'Getting started', link: '/api/getting-started' },
+          { text: 'Request', link: '/api/request' },
+          { text: 'Error codes', link: '/api/errors' },
+        ]
+      },
       {
         text: 'Examples',
         items: [
-          { text: 'Getting started', link: '/getting-started' },
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' },
+          { text: 'cURL', link: '/examples/curl' },
+          { text: 'Ruby on Rails', link: '/examples/ruby-on-rails' },
+          { text: 'NextJS', link: '/examples/nextjs' },
+          { text: '... request or contribute', link: '/examples/contribute' },
         ]
       }
     ],
-  }
+  },
+  lastUpdated: true
 })

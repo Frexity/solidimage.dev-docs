@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "/getting-started"
+      "destination": "/api/getting-started"
     }
   ]
 }
