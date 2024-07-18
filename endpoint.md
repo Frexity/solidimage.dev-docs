@@ -2,14 +2,39 @@
 outline: deep
 ---
 
-# API request parameters
+# Endpoint usage
 
-```
+## URL
 
-      formdata.append('api_key', API_KEY)
-      formdata.append('analysis[file]', imageBlob, fileName)
-      formdata.append('analysis[thumb_hash_data_url_enabled]', '1')
-```
+
+| Key      | Value |
+|----------|-------|
+| `URL`    | `https://solidimage.dev/v1/image_analysis` |
+| `Method` | `POST` |
+
+## Request parameters
+
+| Key                                     | Value     | Description  |
+|-----------------------------------------|-----------|--------------|
+| `api_key`                               | `API_KEY` | You app specific key from the dashboard. |
+| `analysis[file]`                        | `file`    | The file you want to send. |
+| `analysis[thumb_hash_data_url_enabled]` | `1`       | Must be set to 1 to generate the thumb hash image |
+| `use_camel_case` (Optional)             | `1`       | Set to 1 to use camelCase keys in the response. |
+
+::: tip
+At the moment, only the "thumb hash" feature is available. More features will be added in the future. You still need to provide the `analysis[thumb_hash_data_url_enabled]` parameter.
+:::
+
+::: warning
+External URLs are not supported. You have to send an actual image file to the endpoint.
+:::
+
+## Validations
+
+| Key                | Value     |
+|--------------------|-----------|
+| Allowed file types | `avif`, `heic`, `heif`, `jpeg`, `jpg`, `png`, `webp` |
+| Max file size      | 10 MB (10485760 bytes) |
 
 ## Responses
 

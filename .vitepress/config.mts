@@ -16,7 +16,7 @@ export default defineConfig({
         text: 'API',
         items: [
           { text: 'Getting started', link: '/getting-started' },
-          { text: 'Request', link: '/request' },
+          { text: 'Endpoint', link: '/endpoint' },
           { text: 'Error codes', link: '/errors' },
         ]
       },
